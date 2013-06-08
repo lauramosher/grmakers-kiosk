@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'sinatra/contrib'
+require 'sinatra/url_for'
 require 'haml'
 
 # Makers - Main Application

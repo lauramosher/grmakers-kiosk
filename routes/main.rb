@@ -1,5 +1,5 @@
 class Makers < Sinatra::Application
   get '/' do
-    "Hello World!"
+    haml :index
   end
 end
