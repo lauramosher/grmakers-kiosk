@@ -4,8 +4,30 @@
     %title GR Makers Social
     %meta{ :name => "viewport", :content=>"width=device-width, initial-scale=1.0"}
     %script{ :type => "text/javascript", :src => "http://code.jquery.com/jquery-1.9.1.min.js" }
+    %link{ :href => url_for('/static/bootstrap/css/bootstrap-responsive.css'), :rel => 'stylesheet', :type => 'text/css' }
     %link{ :href => url_for('/static/bootstrap/css/bootstrap.css'), :rel => 'stylesheet', :type => 'text/css' }
+    %link{ :href => url_for('/static/css/main.css'), :rel => 'stylesheet', :type => 'text/css' }
   %body
-    .container-fluid
+    .navbar.navbar-static-top
+      .navbar-inner
+        .container
+          %form.navbar-form.pull-right{:action => '/login', :method => :post}
+            %input.input-medium{:type => :text, :placeholder => "Username/Email"}
+            %input.input-medium{:type => :password, :placeholder => "Password"}
+            %input.input-medium{:type => :submit, :value => "Login"}
+    .container
+      .masthead
+        .row
+          %img.span2{:src => "/static/img/grmakers-logo.jpg"}
+          %span.span10
+            %h3.muted GRMakers
+        .navbar
+          .navbar-inner
+            .container
+              %ul.nav
+                - settings.pages.each do |page|
+                  %li{:class => current?(page[:path])}
+                    %a{:href => url_for(page[:path])}=page[:title]
+
       .row-fluid
         =yield
