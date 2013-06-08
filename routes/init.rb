@@ -11,3 +11,6 @@ end
 
 require_relative 'login'
 require_relative 'main'
+require_relative 'user'
+require_relative 'members'
+require_relative 'export'

@@ -1,0 +1,11 @@
+%p this will obvs be better coded, but I wanted to show the flip through from account creation to extra details. Things to add: kids, age (birthday?), gender, etc
+%form
+  %fieldset
+    %legend Account Information
+
+    %label Skills
+    %textarea#skills.skills{:rows => 4}
+    %label Interests
+    %textarea#interests.interests{:rows => 4}
+    %p
+      %input.btn{:type => :submit, :value => "Update"}

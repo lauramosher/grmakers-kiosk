@@ -11,10 +11,13 @@
     .navbar.navbar-static-top
       .navbar-inner
         .container
-          %form.navbar-form.pull-right{:action => '/login', :method => :post}
-            %input.input-medium{:type => :text, :placeholder => "Username/Email"}
-            %input.input-medium{:type => :password, :placeholder => "Password"}
-            %input.input-medium{:type => :submit, :value => "Login"}
+          - if authenticated?
+            %a{:href => "/account"} Account
+          - else 
+            %form.navbar-form.pull-right{:action => '/login', :method => :post}
+              %input.input-medium{:type => :text, :placeholder => "Username/Email"}
+              %input.input-medium{:type => :password, :placeholder => "Password"}
+              %input.input-medium.btn{:type => :submit, :value => "Login"}
     .container
       .masthead
         .row
@@ -28,6 +31,5 @@
                 - settings.pages.each do |page|
                   %li{:class => current?(page[:path])}
                     %a{:href => url_for(page[:path])}=page[:title]
-
       .row-fluid
         =yield
