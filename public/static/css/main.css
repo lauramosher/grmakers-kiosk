@@ -7,32 +7,105 @@
   margin: 60px 0;
 }
 
+/* Custom Footer */
+.footer {
+  padding: 25px 0 0 0;
+  text-align: center;
+  font-size: 80%;
+  clear: both;
+}
 
 /* Customize the navbar links to be fill the entire space of the .navbar */
-.navbar .navbar-inner {
+.masthead {
+  margin-top: 15px;
+}
+.masthead .navbar .navbar-inner {
   padding: 0;
 }
-.navbar .nav {
+.masthead .navbar .nav {
   margin: 0;
   display: table;
   width: 100%;
 }
-.navbar .nav li {
+.masthead .navbar .nav li {
   display: table-cell;
   width: 1%;
   float: none;
 }
-.navbar .nav li a {
+.masthead .navbar .nav li a {
   font-weight: bold;
   text-align: center;
-  border-left: 1px solid rgba(255,255,255,.75);
   border-right: 1px solid rgba(0,0,0,.1);
 }
-.navbar .nav li:first-child a {
+.masthead .navbar .nav li:first-child a {
   border-left: 0;
   border-radius: 3px 0 0 3px;
 }
-.navbar .nav li:last-child a {
+.masthead .navbar .nav li:last-child a {
   border-right: 0;
   border-radius: 0 3px 3px 0;
+}
+
+/* Social Media styles */
+.social-elements {
+  position: relative;
+  top: 8px;
+  margin-left: -4px;
+}
+
+.social-elements ul {
+  margin: 0;
+  padding: 0;
+}
+
+.social-elements ul li {
+  list-style-type: none;
+}
+
+.social-elements a span {
+  display: none;
+}
+
+.social-elements a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0 0 4px 0;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.social-elements a {
+  float: left;
+  margin: 0 0 0 4px;
+}
+
+.social-elements a:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.facebook {
+    background: url(/static/img/sprite_social_element.png) no-repeat -1px 0;
+}
+
+.twitter {
+    background: url(/static/img/sprite_social_element.png) no-repeat -1px -30px;
+}
+
+.rss {
+    background: url(/static/img/sprite_social_element.png) no-repeat -1px -240px;
+}
+
+.flickr {
+    background: url(/static/img/sprite_social_element.png) no-repeat -1px -360px;
+}
+
+.feedback {
+    background: url(/static/img/sprite_social_element.png) no-repeat -1px -450px;
 }
