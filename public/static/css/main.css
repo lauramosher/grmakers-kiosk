@@ -9,9 +9,10 @@
 
 /* Custom Footer */
 .footer {
-  padding: 25px 0 0 0;
-  text-align: center;
+  padding: 0;
   font-size: 80%;
+  width: 1000px;
+  text-align: center;
   clear: both;
 }
 
@@ -48,9 +49,9 @@
 
 /* Social Media styles */
 .social-elements {
-  position: relative;
-  top: 8px;
-  margin-left: -4px;
+  width: 84px; /* number of social media icons x [24px (width) + 4px horizontal padding]*/
+  margin: 0 auto;
+  clear: both;
 }
 
 .social-elements ul {
@@ -67,22 +68,18 @@
 }
 
 .social-elements a {
+  float: left;
   display: block;
   width: 24px;
   height: 24px;
   padding: 0;
-  margin: 0 0 4px 0;
+  margin: 0 0 4px 4px;
   opacity: 0.3;
   filter: alpha(opacity=30);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-}
-
-.social-elements a {
-  float: left;
-  margin: 0 0 0 4px;
 }
 
 .social-elements a:hover {

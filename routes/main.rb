@@ -1,7 +1,7 @@
 class Makers < Sinatra::Application
 
   get '/' do
-    haml :index
+    haml :register
   end
   
 end
