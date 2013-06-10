@@ -5,6 +5,7 @@ module Pages
 end
 
 set :pages, [
+  {:title => 'Home', :path => '/'},
   {:title => 'Account', :path => '/account'},
   {:title => 'Members', :path => '/members'},
   {:title => 'Interests', :path => '/members/interests'},

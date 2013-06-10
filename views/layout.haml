@@ -33,8 +33,9 @@
             .container
               %ul.nav
                 - settings.pages.each do |page|
-                  %li{:class => current?(page[:path])}
-                    %a{:href => url_for(page[:path])}=page[:title]
+                  - unless page[:title] == "Home"
+                    %li{:class => current?(page[:path])}
+                      %a{:href => url_for(page[:path])}=page[:title]
       .row-fluid
         =yield
       .row-fluid
