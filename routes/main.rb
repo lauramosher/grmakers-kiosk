@@ -1,7 +1,8 @@
 class Makers < Sinatra::Application
 
   get '/' do
-    haml :register
+    redirect '/account' if authenticated?
+    haml :index
   end
   
 end
