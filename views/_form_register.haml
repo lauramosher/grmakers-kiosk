@@ -5,13 +5,13 @@
       .controls
         %input#email{:placeholder => "Email Address", :type => :text, :required => true}
     .control-group
-      .control-label{:for => "username"} Username
-      .controls
-        %input#username{:placeholder => "Desired Username", :type => :text, :required => true}
-    .control-group
       .control-label{:for => "password"} Password
       .controls
         %input#password{:placeholder => "Password", :type => :password, :required => true}
     .control-group
+      .control-label{:for => "cpassword"} Confirm Password
       .controls
-        %input#submit.btn{:type => :submit, :value => "Register"}
+        %input#cpassword{:placeholder => "Confirm Password", :type => :password, :required => true}
+    .control-group
+      .controls
+        %input#submit.btn.btn-primary.pull-right{:type => :submit, :value => "Register"}

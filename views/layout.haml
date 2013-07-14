@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title="GR Makers Social | #{@title}"
+    %title="GR Makers Social #{dynamic_title(@title)}"
     %meta{ :name => "viewport", :content=>"width=device-width, initial-scale=1.0"}
     %script{ :type => "text/javascript", :src => "http://code.jquery.com/jquery-1.9.1.min.js" }
     %link{ :href => url_for('/static/bootstrap/css/bootstrap-responsive.css'), :rel => 'stylesheet', :type => 'text/css' }
@@ -16,10 +16,7 @@
               %li
                 %a{:href => "/account"} Account
           - else 
-            %form.navbar-form.pull-right{:action => '/login', :method => :post} 
-              %input.input-medium{:type => :text, :placeholder => "Username/Email"} 
-              %input.input-medium{:type => :password, :placeholder => "Password"}
-              %input.input-medium.btn{:type => :submit, :value => "Login"}
+            = haml :_form_login
     .container
       .masthead
         .row
@@ -27,14 +24,13 @@
             %img.span2{:src => "/static/img/grmakers-logo.jpg"}
           %span.span10
             %h3.muted Welcome to GRMakers Member Information Center
-            %p.muted Enter your information here to have an easy way to share and access member information.
             %p.muted Your project can be even better if you collaborate with members who's skillset fits your needs!  Dream, Collaborate, Create!
         .navbar
           .navbar-inner
             .container
               %ul.nav
                 - settings.pages.each do |page|
-                  - unless page[:title] == "Home"
+                  - unless page[:title].empty?
                     %li{:class => current?(page[:path])}
                       %a{:href => url_for(page[:path])}=page[:title]
       .row-fluid

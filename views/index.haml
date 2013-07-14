@@ -1,8 +1,11 @@
 %legend Not a member? Register now!
-%p Lots of reasons!
-%ul
-  %li Maybe we can list some here.
-  %li and here.
-  %li and here?
-%a.btn.btn-large.btn-primary{:href => "/register"} Register Now
-=# haml :_form_register
+.row-fluid
+  .span6
+    %p Enter your information here to allow you member access.
+    %ul
+      %li Share and access member information.
+      %li Find collaborators that share your interests.
+      %li Find members with particular skillsets to further your project.
+      %li Organizers/Original Founders have access to export functionality for conferences.
+  .span6{:style => "margin-left: 1.8%;"}
+    = haml :_form_register

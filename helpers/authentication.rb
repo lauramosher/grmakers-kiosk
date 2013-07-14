@@ -1,6 +1,6 @@
 module Authentication
   def authenticate!
-    redirect "/login?referrer=#{request.env['PATH_INFO']}" unless authenticated?
+    redirect "/?referrer=#{request.env['PATH_INFO']}" unless authenticated?
   end
 
   def authenticated?
